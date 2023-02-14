@@ -1,0 +1,31 @@
+{
+  "name": "kodefarmers/nepaldata",
+  "description": "A laravel package to fetch Nepal data (Provinces, Districts, Municipalities).",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "KodeFarmers\\NepalData\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Shivaji Chalise",
+      "email": "respond2shivaji@gmail.com"
+    }
+  ],
+  "require-dev": {
+    "orchestra/testbench": "^7.22"
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "require": {},
+  "extra": {
+    "laravel": {
+      "providers": [
+        "KodeFarmers\\NepalData\\NepalDataServiceProvider"
+      ]
+    }
+  }
+}
