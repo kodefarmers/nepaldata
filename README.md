@@ -29,6 +29,9 @@ return NepalData::getAllDataInDevanagari(); // returns all data in nepali text
 return NepalData::getProvinces();
 return NepalData::getProvincesInDevanagari();
 
+return NepalData::getProvincesWithDistricts();
+return NepalData::getProvincesWithDistrictsInDevanagari();
+
 return NepalData::getDistricts();
 return NepalData::getDistrictsInDevanagari();
 
