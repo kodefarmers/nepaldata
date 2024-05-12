@@ -1,5 +1,7 @@
 <?php
 
+namespace KodeFarmers\NepalData\Datas;
+
 $districts =  [
   "Achham",
   "Arghakhanchi",

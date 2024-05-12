@@ -1,5 +1,7 @@
 <?php
 
+namespace KodeFarmers\NepalData\Datas;
+
 $provincesWithDistricts = [
   "Province No. 1" => [
     "Bhojpur",

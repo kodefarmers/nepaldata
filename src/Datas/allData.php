@@ -1,5 +1,7 @@
 <?php
 
+namespace KodeFarmers\NepalData\Datas;
+
 $allData = [
   'Province No. 1' => [
     'Taplejung' => [

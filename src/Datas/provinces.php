@@ -1,5 +1,7 @@
 <?php
 
+namespace KodeFarmers\NepalData\Datas;
+
 $provinces = [
   'Province No. 1',
   'Madesh Pradesh',

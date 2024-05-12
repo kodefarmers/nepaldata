@@ -1,4 +1,7 @@
 <?php
+
+namespace KodeFarmers\NepalData\Datas;
+
 $districtsWithLocalBodies = [
   "Taplejung" => [
     "Ma.Na.Pa." => [],

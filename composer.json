@@ -15,12 +15,11 @@
     }
   ],
   "require-dev": {
-    "orchestra/testbench": "^7.22"
+    "orchestra/testbench": "^9.0.4"
   },
   "scripts": {
     "test": "phpunit"
   },
-  "require": {},
   "extra": {
     "laravel": {
       "providers": [
