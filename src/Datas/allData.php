@@ -3,7 +3,7 @@
 namespace KodeFarmers\NepalData\Datas;
 
 $allData = [
-  'Province No. 1' => [
+  'Koshi' => [
     'Taplejung' => [
       'Ma.Na.Pa.' => [],
       'Upa.Ma.' => [],
@@ -1354,7 +1354,7 @@ $allData = [
 ];
 
 $allDataInDevanagari = [
-  "प्रदेश नं १" => [
+  "कोशी" => [
     "ताप्लेजुङ" => [
       "म.न.पा." => [],
       "उप-म." => [],
@@ -1601,7 +1601,7 @@ $allDataInDevanagari = [
       ]
     ]
   ],
-  "मधेश प्रदेश" => [
+  "मधेश" => [
     "सप्तरी" => [
       "म.न.पा." => [],
       "उप-म." => [],

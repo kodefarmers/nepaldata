@@ -3,7 +3,7 @@
 namespace KodeFarmers\NepalData\Datas;
 
 $provincesWithDistricts = [
-  "Province No. 1" => [
+  "Koshi" => [
     "Bhojpur",
     "Dhankuta",
     "Ilam",
@@ -97,7 +97,7 @@ $provincesWithDistricts = [
 ];
 
 $provincesWithDistrictsInDevanagari = [
-  "प्रदेश नं १" => [
+  "कोशी" => [
     "ताप्लेजुङ",
     "पाँचथर",
     "इलाम",
@@ -113,7 +113,7 @@ $provincesWithDistrictsInDevanagari = [
     "खोटाङ",
     "उदयपुर",
   ],
-  "मधेश प्रदेश" => [
+  "मधेश" => [
     "सप्तरी",
     "सिराहा",
     "धनुषा",
