@@ -32,6 +32,13 @@ class NepalData
     protected $withLocalBodies = false;
 
     /**
+     * Indicates if only administration should be included with districts.
+     *
+     * @var bool
+     */
+    protected $onlyAdministrations = false;
+
+    /**
      * Get all data.
      *
      * @param string $lang Language (english, nepali, devanagari).
@@ -78,9 +85,9 @@ class NepalData
     {
         if($this->withLocalBodies){
             if($lang == 'nepali' || $lang == 'devanagari') {
-                return $this->getDistrictsWithLocalBodiesInDevanagari();
+                return $this->getDistrictsWithLocalBodiesInDevanagari($this->onlyAdministrations);
             }
-            return $this->getDistrictsWithLocalBodies();
+            return $this->getDistrictsWithLocalBodies($this->onlyAdministrations);
         }
 
         if($lang == 'nepali' || $lang == 'devanagari') {
@@ -102,6 +109,15 @@ class NepalData
             $this->withDistricts = true;
         } else if($with == 'localbodies' || $with == 'localbody') {
             $this->withLocalBodies = true;
+        }
+
+        return $this;
+    }
+
+    public function only(string $only): NepalData
+    {
+        if($only == 'administrations' || $only == 'administration') {
+            $this->onlyAdministrations = true;
         }
 
         return $this;
@@ -198,24 +214,64 @@ class NepalData
     }
 
     /**
+     * Get the topmost parent key with the leafnodes values.
+     *
+     * @param array $array.
+     * @return array.
+     */
+    private function getLeafNodes($array): array
+    {
+        $province = [];
+
+        $ma = 'Ma.Na.Pa.';
+        $upa = 'Upa.Ma.';
+        $na = 'Na.Pa.';
+        $ga = 'Ga.Pa.';
+
+        foreach ($array as $key => $value) {
+            $province[$key] = [];
+
+            array_push($province[$key], ...$value[$ma]);
+            array_push($province[$key], ...$value[$upa]);
+            array_push($province[$key], ...$value[$na]);
+            array_push($province[$key], ...$value[$ga]);
+
+        }
+
+        return $province;
+    }
+
+    /**
      * Get districts with localbodies data.
      *
+     * @param boolean $onlyAdministrations.
      * @return array Provinces data.
      */
-    private function getDistrictsWithLocalBodies(): array
+    private function getDistrictsWithLocalBodies($onlyAdministrations = false): array
     {
         require 'Datas/districtsWithLocalBodies.php';
+
+        if($onlyAdministrations){
+            return $this->getLeafNodes($districtsWithLocalBodies);
+        }
+
         return $districtsWithLocalBodies;
     }
 
     /**
      * Get districts with localbodies data in devanagari.
      *
+     * @param boolean $onlyAdministrations.
      * @return array Provinces data.
      */
-    private function getDistrictsWithLocalBodiesInDevanagari(): array
+    private function getDistrictsWithLocalBodiesInDevanagari($onlyAdministrations = false): array
     {
         require 'Datas/districtsWithLocalBodies.php';
+
+        if($onlyAdministrations){
+            return $this->getLeafNodes($districtsWithLocalBodiesInDevanagari);
+        }
+
         return $districtsWithLocalBodiesInDevanagari;
     }
 }
