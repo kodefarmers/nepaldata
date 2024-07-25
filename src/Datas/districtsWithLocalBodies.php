@@ -568,7 +568,7 @@ $districtsWithLocalBodies = [
     "Na.Pa." => ["Besisahar", "Sundarbazar", "MadhyaNepal", "Rainas"],
     "Ga.Pa." => ["Marsyangdi", "Dordi", "Dudhpokhari", "Kwaholasothar"],
   ],
-  "Tanahun" => [
+  "Tanahu" => [
     "Ma.Na.Pa." => [],
     "Upa.Ma." => [],
     "Na.Pa." => ["Vyas", "Shuklagandaki", "Bhanu", "Bhimad"],

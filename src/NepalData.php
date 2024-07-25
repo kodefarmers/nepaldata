@@ -219,7 +219,7 @@ class NepalData
      * @param array $array.
      * @return array.
      */
-    private function getLeafNodes($array): array
+    private function getLeafNodes($array, $lang = 'english'): array
     {
         $province = [];
 
@@ -227,6 +227,13 @@ class NepalData
         $upa = 'Upa.Ma.';
         $na = 'Na.Pa.';
         $ga = 'Ga.Pa.';
+
+        if($lang == 'devanagari'){
+            $ma = "म.न.पा.";
+            $upa = "उप-म.";
+            $na = "न.पा.";
+            $ga = "गा.पा.";
+        }
 
         foreach ($array as $key => $value) {
             $province[$key] = [];
@@ -269,7 +276,7 @@ class NepalData
         require 'Datas/districtsWithLocalBodies.php';
 
         if($onlyAdministrations){
-            return $this->getLeafNodes($districtsWithLocalBodiesInDevanagari);
+            return $this->getLeafNodes($districtsWithLocalBodiesInDevanagari, "devanagari");
         }
 
         return $districtsWithLocalBodiesInDevanagari;

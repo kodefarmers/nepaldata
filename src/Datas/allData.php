@@ -694,7 +694,7 @@ $allData = [
         'Kwaholasothar',
       ],
     ],
-    'Tanahun' => [
+    'Tanahu' => [
       'Ma.Na.Pa.' => [],
       'Upa.Ma.' => [],
       'Na.Pa.' => [
