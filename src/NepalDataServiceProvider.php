@@ -60,7 +60,7 @@ class NepalDataServiceProvider extends ServiceProvider
    */
   protected function registerFacades()
   {
-    $this->app->singleton('NepalData', function ($app) {
+    $this->app->bind('NepalData', function ($app) {
       return new \KodeFarmers\NepalData\NepalData();
     });
   }
